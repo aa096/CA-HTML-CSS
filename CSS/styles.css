@@ -1,5 +1,10 @@
+@font-face { 
+    font-family: "Inter";
+    src: url(Inter-VariableFont_slnt,wght.ttf) format("ttf");
+}
+
 body {
-font-family: Inter, Verdana, Arial Narrow;
+font-family: "Inter", Verdana, sans-serif;
 color: #000;
 margin-left: 30px;
 margin-right: 30px;
@@ -219,6 +224,20 @@ footer {
     display: block;
     background: none;
     color: #fff;
+    display: none;
+}
+
+.footer {
+    display: flex;
+    align-items: stretch;
+
+}
+
+.foot_menu {
+    width: 100px;
+    height: 100px;
+    
+    
 }
 
 .copyright {
