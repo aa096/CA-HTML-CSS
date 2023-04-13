@@ -11,7 +11,7 @@ color: #000;
 header {
     align-items:center;
     justify-content:center;
-    padding: 15px;
+    padding-bottom: 15px;
     background-color: #fff;
 }
 
@@ -41,7 +41,6 @@ nav {
 
 .hamburger-icon img, #menu-checkbox {
     margin-top: 50px;
-
 }
 
 .active {
@@ -86,8 +85,7 @@ nav a {
     width: 40%;
     font-size: 20px;
     font-weight: normal;
-    color: #fff;
-        
+    color: #fff;   
 }
 
 h2 {
@@ -121,14 +119,12 @@ h2 {
     display:flex;
    flex-wrap: wrap;
    padding: 0 10px;
-
 }
 
 .new_arrivals {
     flex: 50%;
     padding: 0 10px;
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .new_arrivals img {
@@ -145,21 +141,18 @@ hr {
     display:flex;
    flex-wrap: wrap;
    padding: 10px 10px;
-
 }
 
 .category_img {
     flex: 50%;
     padding: 10px 10px;
     text-align: center;
-    
 }
 
 .category_img img {
     margin-top: 10px;
     margin-right: 10px;
     vertical-align: middle;
-
 }
 
 .button_hiking {
@@ -205,7 +198,6 @@ footer {
     text-align: center;
     color: #fff;
     font-size: smaller;
-
 }
 
 h3 {
@@ -228,7 +220,7 @@ h3 {
     text-align: center;
 }
 
-a, p {
+.foot_a{
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -277,10 +269,11 @@ a:hover {
         text-decoration: underline;
         font-weight: bold;
     }
+
     .main-image {
         padding: none;
-
     }
+
     .image-text {
         margin-top: 30px;
         font-size: 40px;
@@ -292,7 +285,6 @@ a:hover {
         justify-content: space-around;
         margin: 20 px;
         color: #fff;
-    
     }
     
     h3 {
@@ -341,3 +333,4 @@ a:hover {
         color: #fff;
     }
 }
+
