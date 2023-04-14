@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="CSS/styles.css" rel="stylesheet">
+    <link href="CSS/contact.css" rel="stylesheet">
     <title>Contact Rainydays</title>
 </head>
 <body>
@@ -24,20 +24,38 @@
         </nav>
     </header>
     <main>
-        <form>
-            <fieldset>
-                <Legend>SEND US A MESSAGE </Legend>
-                <label for="name">Name*</label>
-                <input type="text" name="name" id="name" class="form__input" required>
-                <label for="email">Email*</label>
-                <input type="email" email="email" id="email" class="form__input" required>
-                <label for="Phone">Phone</label>
-                <input type="tel" Phone="phone" id="phone" class="form__input">  
-                <label for="message">Your message</label>
-                <input type="text" message="message" id="message" class="form__input" required>
-            </fieldset>
-            <input type="submit" value="Send message">
-        </form>
+        <div class="contact_main">
+            <img src="Images/contact.jpg" alt="Man holding up phone in mountain landscape">
+        </div>
+        <h1> Contact </h1>
+        <section>
+            <div class="Form_container">
+                <form>
+                    <fieldset>
+                        <Legend>Send us a message </Legend>
+                        <label for="name">Name*</label>
+                        <input type="text" name="name" id="name" class="form__input" required>
+                        <label for="email">Email*</label>
+                        <input type="email" email="email" id="email" class="form__input" required>
+                        <label for="Phone">Phone</label>
+                        <input type="tel" Phone="phone" id="phone" class="form__input">  
+                        <label for="message">Your message*</label>
+                        <input type="text" message="message" id="message" class="form__input" required>
+                        <input type="submit" value="Send message">
+                    </fieldset>
+                </form>
+            </div>
+            <div class=find_us>
+                <h4>Visiting address:</h4>
+                <p>Rainydays AS</p>
+                <p>Regnveien 25 </p>
+                <p>0000 Stavanger</p>
+                <h4>Telephone number:</h4>
+                <p>+47 000 00 000</p>
+                <h4>Email:</h4>
+                <p>contact@rainydays.com</p>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="footer_menu">
