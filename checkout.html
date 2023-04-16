@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check-out cart, complete your purchase to stay dry"/>
+    <title>Checkout | Rainydays</title>
+    <script src="https://kit.fontawesome.com/10f22df443.js" crossorigin="anonymous"></script>
+    <link href="CSS/checkout.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <input type="checkbox" id="menu-checkbox"/>
+        <label for="menu-checkbox"class="hamburger-icon"><img src="images/hamburger_menu.png"> </i> </label>
+    <div class="logo">
+        <img src="images/Logo-black.png" alt="Logo of Rainydays"/>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" >Products</a></li>
+            <li><a href="about.html" >About Us</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section>
+            <div class="Form_container">
+                <form>
+                    <fieldset>
+                        <Legend>Contact Information </Legend>
+                        <label for="name">Name*</label>
+                        <input type="text" name="name" id="name" class="form__input" required>
+                        <label for="email">Email*</label>
+                        <input type="email" email="email" id="email" class="form__input" required>
+                        <label for="Phone">Phone</label>
+                        <input type="tel" Phone="phone" id="phone" class="form__input" required> 
+                        <label for="street-address">Address</label> 
+                        <input type="text" address="street-address" id="street-adress" class="form__input" required> 
+                        <label for="postal-code">Postal Code</label> 
+                        <input type="postal-code" Postal-code="postal-code" id="postal-code" class="form__input" required>  
+                        <label for="city">City</label> 
+                        <input type="text" City="city" id="city" class="form__input" required>  
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset>
+                        <Legend>Payment</Legend>
+                        <label for="name">Klarna</label>
+                        <input type="checkbox" id="checkbox_pay" class="form__input">
+                        <label for="name">Credit Card</label>
+                        <input type="checkbox" id="checkbox_pay" class="form__input">
+                        <label for="cardnumer">Card Number*</label>
+                        <input type="text" cardnumber="cardnumber" id="card" class="form__input" required>
+                        <label for="CVC">CVC/CVV*</label>
+                        <input type="text" cvc="cvc" id="card" class="form__input" required>
+                        <label for="exp">Expiry Date*</label>
+                        <input type="text" exp="exp" id="card" class="form__input" required>
+                        <label for="name">Cardholder Name*</label>
+                        <input type="text" name="name" id="name" class="form__input" required>
+                    </fieldset>
+                </form>
+            </div>
+            <div>
+                <img src="Images/cart.png" alt="Item in your cart">
+             </div>
+            <div class="cart_info">
+                <h1>Bergans Rabot Shell Jacket</h1>
+                <p class="blue">Light blue / M </p>
+                <p class="price">$ 199.00</p>
+                <label for="name">Discount code</label>
+                <input type="text" discount="discount" id="name" class="discount">
+                <input type="submit" value="Apply">
+            <hr>
+            <table>
+                <tr>
+                    <td>Subtotal:</td> 
+                    <td class="right">$ 199.00</td>
+                </tr>
+                <tr>
+                    <td>Shipping:</td>
+                    <td class="right">$ 5.00</td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td class="right">$ 204.00</td>
+                </tr>
+            </table>
+            <hr>
+            <a href="purchase.html" class="cta_bag">Complete purchase</a>
+        </section>
+    </main>
+    <footer>
+        <section class="footer_menu">
+            <div class="shop">
+                <h3> Shop </h3>
+                <a href="products.html" class="foot_a">New in</a>
+                <a href="products.html" class="foot_a">Women</a>
+                <a href="products.html" class="foot_a">Men</a>
+                <a href="products.html" class="foot_a">Shop all</a>
+            </div>
+            <div class="about">
+                <h3> About </h3> 
+                <a href="about.html" class="foot_a">About us </a>
+                <a href="contact.html" class="foot_a"> Contact us</a>
+                <p class="foot_a">Career</p>
+                <p class="foot_a">Find a Store</p>
+            </div>
+            <div class="Payment">
+                <h3> Payment </h3>
+                <img src="images/Visa.png" alt="visa logo"> 
+                <img src="images/Mastercard.png" alt="mastercard logo"> 
+                <img src="images/Klarna.png" alt="Klarna logo"> 
+            </div>
+            <div class="follow">
+                <h3>Follow us</h3>
+                <img src="images/Facebook.png" alt="Facebook logo">
+                <img src="images/Instagram.png" alt="Instagram logo"> 
+                <img src="images/YouTube.png" alt="YouTube logo"> 
+                <img src="images/Twitter.png" alt="Twitter logo"> 
+            </div>
+        </section>
+         <div class="logo_white"> <img src="Images/Logo_white.png" alt="Alternative logo of rainydays"/> </div> 
+         <div class="copyright">  &copy; Rainydays 2023 </div>
+    </footer>
+</body>
+</html>
