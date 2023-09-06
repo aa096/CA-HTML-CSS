@@ -21,7 +21,7 @@ for (let i = 0; i < 4; i++) {
     newArrival.appendChild(productImg)
     }
 } catch (error) {
-    showError(error.message);
+    showError(error.message, "#new_items");
 }
 }
 

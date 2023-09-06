@@ -1,4 +1,4 @@
-export function showError(message) {
-    const errorContainer = document.getElementById("jacket_container");
+export function showError(message, target) {
+    const errorContainer = document.querySelector(target);
     errorContainer.innerHTML = `<h3 class="err">Error: ${message}</h3>`;
 }
