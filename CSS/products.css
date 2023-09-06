@@ -89,37 +89,44 @@ nav a {
 
 h2 {
     font-family: "Inter", verdana, sans-serif;
-    font-weight:normal;
+    font-weight: normal;
     font-size: 20px;
 
 }
 
 p {
     font-family: "Inter", verdana, sans-serif;
-    font-weight:normal;
+    font-weight: normal;
     font-size: 25px;
     margin-top: auto;
 }
 
-.products {
+
+#jacket_container {
     display: grid;
     grid-template-columns: -1/1;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     align-self: center;
     justify-items: center;
 }
 
-.product_image img {
+#jacket_container img {
     grid-column: -1/1;
+    max-width: 300px;
 }
  
-.products h2,
-.products p {
+#jacket_container h2,
+#jacket_container p {
     grid-column: 1;
     margin-bottom: 10px;
 }
+
+#jacket_container img {
+    max-height: 300px;
+}
+ 
 
 footer {
     background-color: #282828;
@@ -210,9 +217,10 @@ a:hover {
         background-position-x: right;
       }
 
-    .products {
+    #jacket_container {
         grid-template-columns: repeat(2, 1fr);
     }
+    
     
     .footer_menu {
         display: flex;
@@ -234,15 +242,14 @@ a:hover {
 }
 
 @media (min-width: 926px) {
-    .products {
+    #jacket_container {
         grid-template-columns: repeat(3,minmax(0,1fr));
         align-items: center;
-
     }
 }
 
 @media (min-width: 1422px) {
-    .products {
+    #jacket_container {
         grid-template-columns: repeat(4,minmax(0,1fr));
     }
 }
