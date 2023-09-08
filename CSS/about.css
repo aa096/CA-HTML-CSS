@@ -49,18 +49,6 @@ hr {
     margin-bottom: 20px;
 }
 
-@media (min-width: 600px) {
-    h3 {
-        font-size: 30px;
-    }
-
-    a, p {
-        font-size: 20px;
-        margin: 5px;
-        text-align: initial;
-    }
-}
-
 @media (min-width: 1200px) {
     .about_container {
         margin-top: 10px;

@@ -125,16 +125,6 @@ h2 {
         left: 5%;
     }
 
-    h3 {
-        font-size: 30px;
-    }
-
-    a, p {
-        font-size: 20px;
-        margin: 5px;
-        text-align: initial;
-    }
-
     .button_shop{
         position: absolute;
         margin-left: 100px;

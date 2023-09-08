@@ -1,7 +1,6 @@
-import { showError } from "../UI/displayMessage.js";
-
 export async function getJackets() {
     const url = "https://api.noroff.dev/api/v1/rainy-days";
+    
 try { 
     const response = await fetch(url);
     if (!response.ok) {

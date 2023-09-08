@@ -1,11 +1,13 @@
 import { showError } from "./UI/displayMessage.js";
 import { getJackets } from "./data/API.js";
+import { showLoadingIndicator } from "./UI/loadingIndicator.js";
 
 const jacketContainer = document.querySelector("#jacket_container")
 
 async function displayJackets() {
 
     try { 
+        showLoadingIndicator ("#jacket_container")
         const jackets = await getJackets();
 
         jacketContainer.innerHTML ="";

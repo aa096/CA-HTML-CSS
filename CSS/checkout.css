@@ -3,14 +3,6 @@ h1 {
     text-align: left;
     font-weight: 500;
 }
-
-p {
-    font-family: "Inter", verdana, sans-serif;
-    font-weight: normal;
-    font-size: 25px;
-    margin-top: auto;
-}
-
 section {
     display: flex;
     flex-wrap: wrap;
@@ -113,18 +105,6 @@ table {
 
 td{
     padding-bottom: 10px;
-}
-
-@media (min-width: 600px) { 
-    h3 {
-        font-size: 30px;
-    }
-
-    a, p {
-        font-size: 20px;
-        margin: 5px;
-        text-align: initial;
-    }
 }
 
 @media (min-width: 750px) {
