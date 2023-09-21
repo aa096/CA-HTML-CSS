@@ -15,13 +15,22 @@ header {
     background-color: #fff;
 }
 
-.logo {
+.header_wrapper {
     display: flex;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.logo {
     margin-bottom: 20px;
     height: auto;
     max-width: 100%;
-    
+}
+
+.shoppingbag {
+    padding-top: 20px;
 }
 
 .site-header {
@@ -29,7 +38,7 @@ header {
     z-index: 1;
     top: -10px;
     width: 100%;
-    box-shadow: 50px 0px 80px -40px rgba(0, 0, 0, 0.5)
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 nav {
@@ -48,7 +57,7 @@ nav {
 }
 
 nav, #menu-checkbox {
-    display:none;
+    display: none;
 }
 
 #menu-checkbox:checked ~ nav {
@@ -149,14 +158,18 @@ a:hover {
   }
 
 @media (min-width: 600px) {
+    .header_wrapper {
+        justify-content: space-between;
+    }
+
     h3 {
         font-size: 30px;
     }
 
     nav { 
-    display: block;  
-    position: static;
-    text-align: center;
+        display: block;  
+        position: static;
+        text-align: center;
     }
 
     .hamburger-icon {
