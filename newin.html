@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rainydays is a norwegian lifestyle brand that specialize in rainwear made for people living an active lifestyle"/>
+    <meta name="description" content="Rainydays awesome collection of new rainwear that will keep you dry on a rainyday"/>
+    <link href="CSS/newin.css" rel="stylesheet">
     <link href="CSS/styles.css" rel="stylesheet">
-    <link href="CSS/index.css" rel="stylesheet">
-    <title>Rainydays</title>
+    <title id="title">New In | Rainydays</title>
 <!-- Hotjar Tracking Code for Interaction Design -->
     <script>
         (function(h,o,t,j,a,r){
@@ -27,7 +27,9 @@
             <label for="menu-checkbox"class="hamburger-icon"><img src="images/hamburger_menu.png"></label>
             <div></div>
             <div class="logo">
-                <img src="images/Logo-black.png" alt="Logo of Rainydays"/>
+                <a href="index.html">
+                    <img src="images/Logo-black.png" alt="Logo of Rainydays"/>
+                </a>
             </div>
             <div class="shoppingbag">
                 <a href="checkout.html">
@@ -37,8 +39,8 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="newin.html">New In</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="newin.html" class="active" >New In</a></li>
                 <li><a href="products.html" >Shop All</a></li>
                 <li><a href="sale.html" >Sale</a></li>
                 <li><a href="about.html" >About Us</a></li>
@@ -46,29 +48,13 @@
             </ul>
         </nav>
     </header>
-    <main> 
-        <section class="welcome">
-                <h1>Discover our wide range of Rainwear for men and women living an active lifestyle </h1>
-                <a href="products.html" class="cta">Shop Now</a>
-                <img src="images/rainy_forest.jpg" alt="Man wearing rainjacekt in rainy forest"/>
-        </section>
-        <h2>New Arrivals</h2>
-        <section id="new_items"> 
-        </section>
-        <section class="categorys">
-            <div class="category_1">
-                <a href="products.html" class="cta_cat" >Shop hiking wear</a>
-                <img src="images/hiking.jpg" alt="Man hiking in snowy landscape">
-            </div>
-            <div class="category_2">
-                <a href="products.html" class="cta_cat" >Shop camping wear</a>
-                <img src="images/camping.jpg" alt="Woman and dog camping">
-            </div>
-            <div class="category_1">
-                <a href="products.html" class="cta_cat" >Shop ski wear</a>
-                <img src="images/skiing.jpg" alt="Person skiing in snowy mountain">
+    <main>
+        <section class="new_arrivals"> 
+            <div class="new_image">
+                <h1>New Arrivals</h1>
             </div>
         </section>
+            <div id="new_items"></div>
     </main>
     <footer>
         <section class="footer_menu">
@@ -102,7 +88,7 @@
          <div class="logo_white"> <img src="Images/Logo_white.png" alt="Alternative logo of rainydays"/> </div> 
          <div class="copyright">  &copy; Rainydays 2023 </div>
     </footer>
-    <script src="JS/index.js" type="module"></script>
+    <script src="JS/newin.js" type="module"></script>
     <script src="JS/script.js"></script>
 </body>
 </html>
