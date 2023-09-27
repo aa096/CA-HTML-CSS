@@ -17,7 +17,6 @@ async function getJacket() {
             throw new Error("It's raining, failed to fetch jackets");
         }
         const result = await response.json();
-
             createHTML (result); 
             getTitle (result);
             addStylingIcons ();
@@ -36,7 +35,7 @@ function createHTML (result) {
     detailContainer.innerHTML = `<img src = "${result.image}" alt="${result.description}"></img>
                                  <div class="product_name">
                                     <h1>${result.title}</h1>
-                                    <p class="price">$ ${result.price}</p>
+                                    <p class="price">$ ${result.discountedPrice}</p>
                                     <img src="Images/size.png" alt="Find your size logo" class="size_logo">
                                     <p class="size_p">Size: ${result.sizes}</p>
                                     <button class="cta_bag">add to bag</button>
