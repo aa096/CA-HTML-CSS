@@ -76,24 +76,14 @@ input {
 }
 
 .price {
-    text-align: right;
-    padding-left: 75px;
     font-size: 20px;
+    text-align: right;
+    font-weight: 500;
 }
 
 .blue {
     color: #757070;
 }
-
-.row {
-    display: table-row;
-  }
-
-  .cell {
-    display: table-cell;
-    padding-right: 2rem;
-    color: #757070;
-  }
 
 .cta_bag {
     margin-top: 50px;
@@ -107,6 +97,26 @@ input {
     width: 300px;
     border-radius: 5px;
     padding: 5px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.quantity_bubble {
+    position: absolute;
+    background-color: #757070;
+    color: #fff;
+    border-radius: 1.75em;
+    min-width: 1.75em;
+    height: 1.75em;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.75em;
+    font-size: 20px;  
+    font-weight: 500;
+    top: -16px;
+    left: 60px;
 }
 
 .cart_img {
@@ -141,7 +151,7 @@ td{
 }
 
 hr {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #c8c6c6;
 }
 

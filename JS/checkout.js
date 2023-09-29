@@ -7,17 +7,19 @@ if (products.lenght === 0) {
     cartContainer.innerHTML = `<p>Nothing in the cart</p>`;
 }
  
+
+let totalPrice = 0;
+
 products.forEach((product) => {
-    cartContainer.innerHTML += `<img class="cart_img" src="${product.img}" alt="${product.description}"/>
+    totalPrice = product.price * product.quantity;
+
+    cartContainer.innerHTML += ` <div class="wrapper">
+                                    <img class="cart_img" src="${product.img}" alt="${product.description}"/>
+                                    <span class="quantity_bubble">${product.quantity}</span>
+                                </div>
                                 <h1>${product.title}</h1>
                                 <p class="blue">${product.color}</p>
-                                <div class="table">
-                                    <div class=row>
-                                        <p class="cell">Quantity: </p>
-                                        <p class="cell">${product.quantity} x </p>
-                                        <p class="price">$ ${product.price}</p>
-                                    </div>
-                                </div>
+                                <p class="price">$ ${totalPrice.toFixed(2)}</p>
                                 <hr>`;
 });
 
