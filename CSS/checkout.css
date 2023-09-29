@@ -60,24 +60,40 @@ input[type=submit] {
     border-radius: 5px;
 }
 
+.total {
+    margin: 15px;
+}
+
 input {
     width: 350px;
     padding: 12px;
-    margin-bottom: 15px;
+    margin: 15px;
 }
 
-.cart img {
-    width: 216px;
-    height: 218px;
+.discount {
+    padding-top: 20px;
+    margin-left: 15px;
 }
 
 .price {
     text-align: right;
+    padding-left: 75px;
+    font-size: 20px;
 }
 
 .blue {
     color: #757070;
 }
+
+.row {
+    display: table-row;
+  }
+
+  .cell {
+    display: table-cell;
+    padding-right: 2rem;
+    color: #757070;
+  }
 
 .cta_bag {
     margin-top: 50px;
@@ -93,6 +109,23 @@ input {
     padding: 5px;
 }
 
+.cart_img {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70px;
+    border: 1px solid #aeadad;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.cart_info {
+    overflow-y: auto;
+    max-height: 600px;
+    padding: 30px;
+    border: 1px solid #000;
+    margin-top: 20px;
+}
+
 table {
     padding-top: 20px;
     font-size: 20px;
@@ -105,6 +138,11 @@ table {
 
 td{
     padding-bottom: 10px;
+}
+
+hr {
+    margin-bottom: 20px;
+    color: #c8c6c6;
 }
 
 @media (min-width: 750px) {

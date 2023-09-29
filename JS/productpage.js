@@ -1,4 +1,5 @@
 import { showError } from "./UI/displayMessage.js";
+import { getExistingCart } from "./utils/cartFunctions.js";
 import { showLoadingIndicator } from "./UI/loadingIndicator.js";
 
 const queryString = document.location.search;
@@ -29,19 +30,57 @@ async function getJacket() {
 
 getJacket ();
 
-
 function createHTML (result) {
     const detailContainer = document.querySelector(".main_section");
-    detailContainer.innerHTML = `<img src = "${result.image}" alt="${result.description}"></img>
+    detailContainer.innerHTML = `<img src = "${result.image}" alt="${result.description}"/>
                                  <div class="product_name">
                                     <h1>${result.title}</h1>
                                     <p class="price">$ ${result.discountedPrice}</p>
                                     <img src="Images/size.png" alt="Find your size logo" class="size_logo">
                                     <p class="size_p">Size: ${result.sizes}</p>
-                                    <button class="cta_bag">add to bag</button>
+                                    <button class="cta_bag"> add to bag</button>
                                     <p class="description">${result.description}</p>
                                 </div>`
+
+    const addToCartButton = document.querySelector (".cta_bag");
+    addToCartButton.addEventListener("click", () => {
+        alert ("The item has been added to the bag")
+        addToCart (result);
+    });
 }
+
+function addToCart (result) {
+    const id = result.id;
+    const title = result.title;
+    const img = result.image;
+    const price = result.discountedPrice;
+    const desc = result.description;
+    const color = result.baseColor;
+
+    const currentCart = getExistingCart();
+
+    const productExsists = currentCart.find (function(bag) {
+        return bag.id === id; 
+    });
+
+    if (productExsists === undefined) {
+        const cartItem = { id, title, img, price, desc, color, quantity: 1 };
+        currentCart.push(cartItem);
+        saveCart(currentCart);
+    }
+    else {
+        productExsists.quantity += 1;
+        // const newBag = currentCart.filter (cart => cart.id !== id);
+        saveCart (currentCart);
+    }
+}
+
+const products = getExistingCart ();
+
+function saveCart(cart) {
+    localStorage.setItem("products", JSON.stringify(cart));
+}
+
 
 
 function getTitle (result) {
@@ -57,3 +96,4 @@ function addStylingIcons () {
                                      <img src="Images/Windproof.png" alt="icon demostrating that jacket is windproof" class="properties_icons">
                                      <img src="Images/Breath.png" alt="Icon demostrating that jacket is breathable" class="properties_icons">`
 }
+
