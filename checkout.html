@@ -55,39 +55,46 @@
                 <form>
                     <fieldset>
                         <Legend>Contact Information </Legend>
-                        <label for="name">Name*</label>
-                        <input type="text" name="name" id="name" class="form__input" required>
-                        <label for="email">Email*</label>
-                        <input type="email" email="email" id="email" class="form__input" required>
-                        <label for="Phone">Phone</label>
-                        <input type="tel" Phone="phone" id="phone" class="form__input" required> 
-                        <label for="street-address">Address</label> 
-                        <input type="text" address="street-address" id="street-adress" class="form__input" required> 
-                        <label for="postal-code">Postal Code</label> 
-                        <input type="postal-code" Postal-code="postal-code" id="postal-code" class="form__input" required>  
-                        <label for="city">City</label> 
-                        <input type="text" City="city" id="city" class="form__input" required>  
+                            <label for="name">Name *</label>
+                                <input type="text" name="name" id="name" class="form__input" required>
+                            <label for="email">Email *</label>
+                                <input type="email" email="email" id="email" class="form__input" required>
+                            <label for="Phone">Phone *</label>
+                                <input type="tel" Phone="phone" id="phone" class="form__input" required> 
+                            <label for="street-address">Address *</label> 
+                                <input type="text" address="street-address" id="street-adress" class="form__input" required> 
+                            <label for="postal-code">Postal Code *</label> 
+                                <input type="text" Postal-code="postal-code" id="postal-code" class="form__input" required>  
+                            <label for="city">City *</label> 
+                                <input type="text" City="city" id="city" class="form__input" required>  
                     </fieldset>
                 </form>
                 <form>
                     <fieldset>
                         <Legend>Payment</Legend>
-                        <label for="name">Klarna</label>
-                        <input type="checkbox" id="checkbox_pay" class="form__input">
-                        <label for="name">Credit Card</label>
-                        <input type="checkbox" id="checkbox_pay" class="form__input">
-                        <label for="cardnumer">Card Number*</label>
-                        <input type="text" cardnumber="cardnumber" id="card" class="form__input" required>
-                        <label for="CVC">CVC/CVV*</label>
-                        <input type="text" cvc="cvc" id="card" class="form__input" required>
-                        <label for="exp">Expiry Date*</label>
-                        <input type="text" exp="exp" id="card" class="form__input" required>
-                        <label for="name">Cardholder Name*</label>
-                        <input type="text" name="name" id="name" class="form__input" required>
+                            <label for="name">Klarna</label>
+                            <div class="klarna">
+                                <input type="radio" id="checkbox_pay" class="form__input">
+                                <img class="payment_img" src="images/Klarna2.png" alt="Klarna logo">
+                            </div> 
+                                <label for="name">Credit Card</label>
+                                <div class="card">
+                                    <input type="radio" id="checkbox_pay" class="form__input">
+                                    <img class="payment_img" src="images/Visa2.png" alt="visa logo"> 
+                                    <img class="payment_img" src="images/Master.png" alt="mastercard logo"> 
+                            </div>
+                            <label for="cardnumber">Card Number *</label>
+                                <input type="number" cardnumber="cardnumber" id="card" class="form__input" required>
+                            <label for="CVC">CVC/CVV *</label>
+                                <input type="number" cvc="cvc" id="card" class="form__input" required>
+                            <label for="exp">Expiry Date *</label>
+                                <input type="date" exp="exp" id="card" class="form__input" required>
+                            <label for="name">Cardholder Name *</label>
+                                <input type="text" name="name" id="name" class="form__input" required>
                     </fieldset>
                 </form>
             </div>
-            <div>
+            <div class="sidebar">
                 <div class="cart_info">
                 </div>
                 <div class="total">
@@ -127,7 +134,7 @@
          <div class="logo_white"> <img src="Images/Logo_white.png" alt="Alternative logo of rainydays"/> </div> 
          <div class="copyright">  &copy; Rainydays 2023 </div>
     </footer>
-    <script src="JS/script.js"></script>
+    <script src="JS/script.js" type="module"></script>
     <script src="JS/checkout.js" type="module"></script>
 </body>
 </html>
