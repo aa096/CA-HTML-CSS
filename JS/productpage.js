@@ -51,7 +51,7 @@ function createHTML (result) {
                                     </div>
                                     <div class="error_here"></div>
                                     <div class="size_p"></div>
-                                    <button class="cta_bag"> add to bag</button>
+                                    <button class="cta_bag"> add to cart</button>
                                 </div>`
 
   
@@ -88,13 +88,12 @@ function createHTML (result) {
    addToCartButton.addEventListener("click", () => {
 
         if (!selectSize) {
-            sizeMessage ("Please select a size before adding to the bag");
+            sizeMessage ("Please select a size before adding to the cart");
             return;
         }
-            sizeMessage ("✓ The item has been added to the bag")
+            sizeMessage ("✓ The item has been added to the cart")
             addToCart (result, selectSize);
    });
-
 }
 
 

@@ -26,6 +26,10 @@ h2 {
     font-size: 25px;
 }
 
+[type=radio]:checked {
+    accent-color: #898686;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -81,6 +85,10 @@ input[type=submit] {
     border-radius: 5px;
 }
 
+input[type=submit]:hover {
+    background-color: #000;
+}
+
 fieldset {
     display: flex;
     flex-flow: column wrap;
@@ -98,11 +106,6 @@ input {
     margin: 15px;
 }
 
-.discount {
-    padding-top: 20px;
-    margin-left: 15px;
-}
-
 .price {
     font-size: 18px;
     font-weight: 400;
@@ -116,17 +119,18 @@ input {
 }
 
 .cta_bag {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
-    background-color: #1f1e1e;
+    background-color: #515050;
     color: #fff;
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
-    width: 100%;
+    width: 80%;
     border: none;
     border-radius: 999px;
     padding: 10px;
+    margin-left: 40px;
 }
 
 .cta_bag:hover {
@@ -160,6 +164,7 @@ input {
     border: 1px solid #aeadad;
     border-radius: 8px;
     padding: 5px;
+    margin-left: 10px;
 }
 
 .cart_item {
@@ -187,7 +192,7 @@ input {
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 600px;
-    padding: 20px 0px 20px 0px;
+    padding: 30px;
     margin-top: 30px;
     width: 348px;
 }
@@ -207,9 +212,13 @@ td {
 }
 
 hr {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     color: #c8c6c6;
     width: 310px;
+}
+
+hr::before {
+    margin: 60px;
 }
 
 .remove_item {
@@ -218,14 +227,59 @@ hr {
     border: 0px;
     border-radius: 7px;
     padding: 5px;
-    text-transform: uppercase;
-    font-weight: 390;
+    font-weight: 300;
     font-size: 12px;
     margin: 10px 0px 10px 260px;
 }
 
 .remove_item:hover {
     background-color: #000;
+}
+
+.discount {
+    display: flex;
+    justify-content: center;
+}
+
+.discount input[type=text] {
+    width: 200px;
+}
+
+.disc {
+    position: absolute;
+    margin-left: -195px;
+    margin-top: -10px;
+}
+
+.apply_cta {
+    margin-left: -10px;
+}
+
+.price_total {
+    display: flex;
+    justify-content: center;
+    gap: 190px;
+}
+
+.price_to {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #000;
+    text-decoration: none;
 }
 
 @media (min-width: 600px) {
@@ -239,7 +293,7 @@ hr {
         overflow-y: auto;
         overflow-x: hidden;
         max-height: 600px;
-        padding: 30px;
+        padding: 30px 30px 0px 30px;
         width: 400px;
     }
 
@@ -281,7 +335,7 @@ hr {
     }
 
     hr {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         color: #c8c6c6;
         width: auto;
     }
@@ -296,7 +350,7 @@ hr {
         box-sizing: border-box;
         text-align: center;
         line-height: 1.75em;
-        font-size: 20px;  
+        font-size: 17px;  
         font-weight: 500;
         top: -16px;
         left: 60px;
@@ -315,14 +369,6 @@ hr {
     }
 
     .remove_item {
-        color: #fff;
-        background-color: #717171;
-        border: 0px;
-        border-radius: 7px;
-        padding: 5px;
-        text-transform: uppercase;
-        font-weight: 390;
-        font-size: 12px;
         margin: 10px 0px 10px 330px;
     }
 
@@ -337,6 +383,25 @@ hr {
     
      .card [type=radio] {
         margin-right: 143px;
+    }
+
+    .cta_bag {
+        margin-left: 50px;
+    }
+
+    .discount {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .discount input[type=text] {
+        width: 280px;
+    }
+    
+    .disc {
+        position: absolute;
+        margin-left: -275px;
+        margin-top: -10px;
     }
 }
 
@@ -353,7 +418,7 @@ hr {
         overflow-y: auto;
         overflow-x: hidden;
         max-height: 600px;
-        padding: 30px;
+        padding: 30px 30px 0px 30px;
         width: 450px;
     }
 
@@ -376,8 +441,6 @@ hr {
 @media (min-width: 1016px) {
     .sidebar {
         width: auto;
-        /* padding-left: 4%; */
-        background-position: left top;
         float: right;
         background-color: #f5f5f5;
       }

@@ -124,7 +124,15 @@ h3 {
     font-size: 20px;
 }
 
-a:hover {
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+main a:hover {
     text-decoration: underline;
 }
 
@@ -139,7 +147,7 @@ a:hover {
     margin-bottom: 30px;
 }
 
-.follow img{
+.follow img {
     margin: 10px;
 }
 
@@ -149,6 +157,10 @@ a:hover {
     text-align: center;
     margin-top: -35px;
     font-weight: 500;
+}
+
+.cart_quantity:active {
+    text-decoration: none;
 }
 
 .loader {
