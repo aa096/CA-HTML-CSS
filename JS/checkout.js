@@ -4,6 +4,19 @@ const products = getExistingCart ();
 const totalContainer = document.querySelector(".total");
 const cartContainer = document.querySelector (".cart_info");
 
+function removeItem (index) {
+    const removeProduct = products[index];
+
+    if (removeProduct.quantity > 1) {
+        removeProduct.quantity -= 1;
+    } else { 
+        products.splice(index, 1);
+    }
+    
+    localStorage.setItem("products", JSON.stringify(products));
+    displayCart();
+}
+
 const staticHTML =  `<div class="discount">
                         <label class="disc" for="disc">Discount code:</label>
                         <input type="text" name="discount" id="disc" class="discount">
@@ -17,20 +30,19 @@ const staticHTML =  `<div class="discount">
 
 totalContainer.innerHTML = staticHTML;
 
-if (products.length === 0) {
-    const container = document.querySelector (".message");
-    container.innerHTML = `<div class="empty">
-                            <h1>Your shopping cart is empty.</h1>
-                            <a href="products.html"> <- Go back</a>
-                            </div>`;
-}
-
 function displayCart() { 
     let totalPrice = 0;
 
     cartContainer.innerHTML = "";
 
-    products.forEach((product, index) => {
+    if (products.length === 0) {
+        const container = document.querySelector (".message");
+        container.innerHTML = `<div class="empty">
+                                <h1>Your shopping cart is empty.</h1>
+                                <a href="products.html"> <- Go back</a>
+                                </div>`;
+    } else {
+        products.forEach((product, index) => {
         totalPrice += product.price * product.quantity;
         const itemPrice = product.price * product.quantity;
 
@@ -49,24 +61,17 @@ function displayCart() {
                                         <button class="remove_item">Remove</button>
                                         <hr>
                                     </div>`;
-    });
+        });
+    }
 
     totalContainer.querySelector(".price_to").textContent = `$ ${totalPrice.toFixed(2)}`;
 
-    document.querySelectorAll(".remove_item").forEach((button, index) => {
-        button.addEventListener("click", () => {
-            removeItem(index)
-        });
+    cartContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("remove_item")) { 
+            const index = event.target.closest(".cart_item").dataset.index;
+            removeItem(index);
+        }
     });
-}
-
-function removeItem (index) {
-    products.splice(index, 1);
-    localStorage.setItem("products", JSON.stringify(products));
-
-    window.location.reload();
-
-    displayCart();
 }
 
 displayCart();

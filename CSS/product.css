@@ -5,9 +5,11 @@
 }
 
 .product_img {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 100%;
     margin-top: 20px;
-    padding: 20px;
+    padding: 0px;
 }
 
 .size_p button {
@@ -120,7 +122,15 @@ h1 {
 }
 
 h2 {
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.prop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .properties_icons {
@@ -128,7 +138,7 @@ h2 {
     margin-left: 10px;
     margin-bottom: 40px;
     text-align: center;
-    
+    max-width: 100%;
 }
 
 .description {
@@ -163,6 +173,15 @@ h2 {
     .size_p button:hover {
         pointer-events: none;
     }
+
+    .product_img {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    
 }
 
 @media (min-width: 1200px) {
@@ -170,6 +189,7 @@ h2 {
         display: flex;
         flex-direction: row;
         justify-items: space-around;
+
     }
 
     .description {

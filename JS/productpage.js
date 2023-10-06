@@ -1,14 +1,18 @@
 import { showError } from "./UI/displayMessage.js";
-import { getExistingCart } from "./utils/cartFunctions.js";
 import { showLoadingIndicator } from "./UI/loadingIndicator.js";
 import { sizeMessage } from "./UI/sizeMessage.js";
+import { addStylingIcons } from "./UI/renderStylingIcons.js";
+import { addToCart } from "./utils/cart.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const title = params.get("title")
-
 const url = "https://api.noroff.dev/api/v1/rainy-days/"+ id;
+
+function getTitle (result) {
+    const titleContainer = document.getElementById("title");    
+    titleContainer.textContent = result.title;
+}
 
 async function getJacket() {
     try { 
@@ -19,7 +23,7 @@ async function getJacket() {
             throw new Error("It's raining, failed to fetch jackets");
         }
         const result = await response.json();
-            createHTML (result); 
+            renderProductDetails (result); 
             getTitle (result);
             addStylingIcons ();
         } 
@@ -31,7 +35,7 @@ async function getJacket() {
 
 getJacket ();
 
-function createHTML (result) {
+function renderProductDetails (result) {
     const detailContainer = document.querySelector(".main_section");
     detailContainer.innerHTML = `<img class="product_img" src = "${result.image}" alt="${result.description}"/>
                                  <div class="product_name">
@@ -53,9 +57,6 @@ function createHTML (result) {
                                     <div class="size_p"></div>
                                     <button class="cta_bag"> add to cart</button>
                                 </div>`
-
-  
-
 
     const sizeButtonContainer = document.querySelector(".size_p");
     const showSize = document.querySelector(".regular_size");
@@ -96,52 +97,4 @@ function createHTML (result) {
    });
 }
 
-
-function addToCart (result, selectSize) {
-    const id = result.id;
-    const title = result.title;
-    const img = result.image;
-    const price = result.discountedPrice;
-    const desc = result.description;
-    const color = result.baseColor;
-    const size = selectSize;
-
-    const currentCart = getExistingCart();
-
-    const productExsists = currentCart.find (function(bag) {
-        return bag.id === id; 
-    });
-
-    if (productExsists === undefined) {
-        const cartItem = { id, title, img, price, desc, color, quantity: 1, size };
-        currentCart.push(cartItem);
-        saveCart(currentCart);
-    }
-    else {
-        productExsists.quantity += 1;
-        saveCart (currentCart);
-    }
-}
-
-const products = getExistingCart ();
-
-function saveCart(cart) {
-    localStorage.setItem("products", JSON.stringify(cart));
-}
-
-
-
-function getTitle (result) {
-    const titleContainer = document.getElementById("title");    
-    titleContainer.textContent = result.title;
-}
-
-function addStylingIcons () {
-    const PropertiesContainer = document.querySelector(".properties");
-    PropertiesContainer.innerHTML = `<h2> Properties </h2>
-                                     <img src="Images/Waterproof.png" alt="icon demostrating that jacket is waterproof" class="properties_icons">
-                                     <img src="Images/Feather.png" alt="Icon demostrating that jacket is lightweight" class="properties_icons">
-                                     <img src="Images/Windproof.png" alt="icon demostrating that jacket is windproof" class="properties_icons">
-                                     <img src="Images/Breath.png" alt="Icon demostrating that jacket is breathable" class="properties_icons">`
-}
 
