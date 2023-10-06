@@ -1,5 +1,5 @@
 .new_arrivals {
-    background-image: url(../images/grass.jpg);
+    background-image: url(../images/new.jpg);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -7,18 +7,18 @@
     flex-wrap: wrap;
     flex: 1;
     min-width: 360px;
-    height: 70vh;
-    padding-top: 50px;
+    height: 50vh;
+    padding-top: 40px;
     justify-content:center;
     align-items:center;
     color: #fff;
     text-transform: uppercase;
-    outline-offset: 4px;
 }
 
 h1 {
-    margin-top: -100px;
-    background-color: #024d5b;
+    margin-top: -190px;
+    background-color: #000;
+    font-size: 30px;
 }
 
 h2, a {
@@ -77,12 +77,19 @@ p {
         margin: 5px;
         text-align: initial;
     }
+
+    .new_arrivals {
+        height: 70vh;
+    }
 }
 
 @media (min-width: 926px) {
     #jacket_container {
         grid-template-columns: repeat(3,minmax(0,1fr));
         align-items: center;
+    }
+    .new_arrivals {
+        height: 90vh;
     }
 }
 
