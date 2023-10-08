@@ -66,7 +66,7 @@ input[type=submit] {
 }
 
 input {
-    width: 350px;
+    width: 300px;
     padding: 12px;
     margin-bottom: 15px;
 }
@@ -82,6 +82,9 @@ legend {
     padding-bottom: 10px;
 }
 
+.address p {
+    line-height: 6px;
+}
 
 @media (min-width: 750px) {
     section {

@@ -157,6 +157,7 @@ main a:hover {
     text-align: center;
     margin-top: -35px;
     font-weight: 500;
+    color: #000;
 }
 
 .cart_quantity:active {
