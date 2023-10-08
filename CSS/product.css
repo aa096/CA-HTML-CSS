@@ -147,6 +147,11 @@ h2 {
     font-weight: 350;
 }
 
+.error {
+    font-size: larger;
+    font-weight: 500;
+}
+
 @media (min-width: 600px) {
     .description {
         width: 500px;
