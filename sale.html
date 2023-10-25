@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Purchase completed at Rainydays, you will soon recive your rainwear"/>
-    <title>Purchase Complete | Rainydays</title>
-    <script src="https://kit.fontawesome.com/10f22df443.js" crossorigin="anonymous"></script>
-    <link href="CSS/complete.css" rel="stylesheet">
+    <meta name="description" content="Rainydays awesome collection of rainwear that are currently on sale"/>
+    <link href="CSS/sale.css" rel="stylesheet">
     <link href="CSS/styles.css" rel="stylesheet">
-    <title>Rainydays | Purchase complete</title>
+    <title id="title">Sale | Rainydays</title>
 <!-- Hotjar Tracking Code for Interaction Design -->
     <script>
         (function(h,o,t,j,a,r){
@@ -41,7 +39,7 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="newin.html">New In</a></li>
                 <li><a href="products.html" >Shop All</a></li>
                 <li><a href="sale.html" >Sale</a></li>
@@ -51,24 +49,12 @@
         </nav>
     </header>
     <main>
-        <section class="main_complete">
-            <div>
-                <img src="Images/Group 12.png" alt="checkmark icon" class="checked">
-            </div>
-            <div class="purchase">
-                <h1>Purchase completed</h1>
-                <p>Thank you for your order!</p>
-                <p>Order number: RD-440-02</p>
-                <p>Your order will be dispatched from our wearhouse soon, </p>
-                <p>and we'll let you know once it's on its way to you</p>
-                <div class="img_1">
-                    <img src="Images/walk.jpg" alt="Woman hiking in light blue rainjacket">
-                </div>
-                <div>
-                    <a href="index.html" class="cta_bag">Shop more</a>
-                </div>
+        <section class="sale"> 
+            <div class="sale_image">
+                <h1>Sale</h1>
             </div>
         </section>
+            <div id="sale_container"></div>
     </main>
     <footer>
         <section class="footer_menu">
@@ -102,6 +88,7 @@
          <div class="logo_white"> <img src="Images/Logo_white.png" alt="Alternative logo of rainydays"/> </div> 
          <div class="copyright">  &copy; Rainydays 2023 </div>
     </footer>
+    <script src="JS/sale.js" type="module"></script>
     <script src="JS/script.js" type="module"></script>
 </body>
 </html>

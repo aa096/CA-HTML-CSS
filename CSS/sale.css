@@ -1,24 +1,24 @@
-.new_arrivals {
-    background-image: url(../images/new.jpg);
+.sale {
+    background-image: url(../images/sale.jpg);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     flex: 1;
     min-width: 360px;
-    height: 50vh;
-    padding-top: 40px;
-    justify-content:center;
-    align-items:center;
+    height: 70vh;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
     color: #fff;
+    font-size: 30px;
     text-transform: uppercase;
 }
 
 h1 {
-    margin-top: -190px;
     background-color: #000;
-    font-size: 30px;
+    padding: 0px 8px 0px 8px;
+    margin-left: 70px;
 }
 
 h2, a {
@@ -30,15 +30,7 @@ h2, a {
 
 }
 
-p {
-    font-family: "Inter", verdana, sans-serif;
-    font-weight: normal;
-    font-size: 25px;
-    margin-top: auto;
-}
-
-
-#jacket_container {
+#sale_container {
     display: grid;
     grid-template-columns: -1/1;
     align-items: center;
@@ -48,23 +40,36 @@ p {
     justify-items: center;
 }
 
-#jacket_container img {
+#sale_container img {
     grid-column: -1/1;
     max-width: 300px;
 }
  
-#jacket_container h2,
-#jacket_container p {
+#sale_container h2,
+#sale_container p {
     grid-column: 1;
     margin-bottom: 10px;
 }
 
-#jacket_container img {
+#sale_container img {
     max-height: 300px;
 }
 
+.sale_price {
+    text-decoration:line-through;
+    padding-right: 30px;
+    font-size: 19px;
+    font-style: italic;
+}
+
+.red {
+    color:  #A81900;
+    font-size: 22px;
+    font-weight: 500;
+}
+
 @media (min-width: 600px) {
-    #jacket_container {
+    #sale_container {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -77,24 +82,17 @@ p {
         margin: 5px;
         text-align: initial;
     }
-
-    .new_arrivals {
-        height: 70vh;
-    }
 }
 
 @media (min-width: 926px) {
-    #jacket_container {
+    #sale_container {
         grid-template-columns: repeat(3,minmax(0,1fr));
         align-items: center;
-    }
-    .new_arrivals {
-        height: 90vh;
     }
 }
 
 @media (min-width: 1422px) {
-    #jacket_container {
+    #sale_containers {
         grid-template-columns: repeat(4,minmax(0,1fr));
     }
 }

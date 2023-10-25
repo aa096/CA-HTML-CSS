@@ -1,24 +1,25 @@
 .new_arrivals {
-    background-image: url(../images/new.jpg);
+    background-image: url(../images/bridge.jpg);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     flex: 1;
     min-width: 360px;
-    height: 50vh;
-    padding-top: 40px;
-    justify-content:center;
-    align-items:center;
+    height: 70vh;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     text-transform: uppercase;
+    outline-offset: 4px;
 }
 
 h1 {
-    margin-top: -190px;
+    margin-top: 200px;
+    text-align: center;
     background-color: #000;
-    font-size: 30px;
+    padding: 5px;
 }
 
 h2, a {
@@ -30,15 +31,7 @@ h2, a {
 
 }
 
-p {
-    font-family: "Inter", verdana, sans-serif;
-    font-weight: normal;
-    font-size: 25px;
-    margin-top: auto;
-}
-
-
-#jacket_container {
+#new_items {
     display: grid;
     grid-template-columns: -1/1;
     align-items: center;
@@ -48,23 +41,23 @@ p {
     justify-items: center;
 }
 
-#jacket_container img {
+#new_items img {
     grid-column: -1/1;
     max-width: 300px;
 }
  
-#jacket_container h2,
-#jacket_container p {
+#new_items h2,
+#new_items p {
     grid-column: 1;
     margin-bottom: 10px;
 }
 
-#jacket_container img {
+#new_items img {
     max-height: 300px;
 }
 
 @media (min-width: 600px) {
-    #jacket_container {
+    #new_items {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -77,24 +70,17 @@ p {
         margin: 5px;
         text-align: initial;
     }
-
-    .new_arrivals {
-        height: 70vh;
-    }
 }
 
 @media (min-width: 926px) {
-    #jacket_container {
-        grid-template-columns: repeat(3,minmax(0,1fr));
+    #new_items {
+        grid-template-columns: repeat(2,minmax(0,1fr));
         align-items: center;
-    }
-    .new_arrivals {
-        height: 90vh;
     }
 }
 
 @media (min-width: 1422px) {
-    #jacket_container {
+    #new_items {
         grid-template-columns: repeat(4,minmax(0,1fr));
     }
 }
