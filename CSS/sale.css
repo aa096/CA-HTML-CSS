@@ -42,17 +42,16 @@ h2, a {
 
 #sale_container img {
     grid-column: -1/1;
-    max-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 500px;
 }
  
 #sale_container h2,
 #sale_container p {
     grid-column: 1;
     margin-bottom: 10px;
-}
-
-#sale_container img {
-    max-height: 300px;
 }
 
 .sale_price {
@@ -82,17 +81,42 @@ h2, a {
         margin: 5px;
         text-align: initial;
     }
+    #sale_container img {
+        max-height: 350px;
+    }
 }
+
+@media (min-width: 800px) {
+    #sale_container img {
+        max-height: 400px;
+    }
+}
+
 
 @media (min-width: 926px) {
     #sale_container {
         grid-template-columns: repeat(3,minmax(0,1fr));
         align-items: center;
     }
+
+    #sale_container img {
+        max-height: 350px;
+    }
 }
 
+@media (min-width: 1200px) {
+    #sale_container img {
+        max-height: 400px;
+    }
+}
+
+
 @media (min-width: 1422px) {
-    #sale_containers {
+    #sale_container {
         grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+
+    #sale_container img {
+        max-height: 400px;
     }
 }

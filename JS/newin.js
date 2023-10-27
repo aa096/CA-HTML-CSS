@@ -20,21 +20,22 @@ async function displayNewArrivals() {
         newArrival.href = "productpage.html?id=" + jacket.id; 
 
         const productImg = document.createElement("img");
-        productImg.src = jacket.image;
-        productImg.alt = jacket.description;
+        productImg.src = jacket.images[0].src;
+        productImg.alt = jacket.images[0].name;
 
         const jacketText = document.createElement("h2");
         jacketText.classList.add("products");
-        jacketText.textContent = jacket.title;
+        jacketText.textContent = jacket.name;
 
-        const price = document.createElement("p");
-        price.classList.add("products");
-        price.textContent = ("$ ") + jacket.price;
+        const priceHolder = document.createElement("p");
+        const formattedPrice = (Number(jacket.prices.price) / 100). toFixed(2);
+        priceHolder.classList.add("price");
+        priceHolder.textContent = `${jacket.prices.currency_prefix} ${formattedPrice}`;
         
         newContainer.appendChild(newArrival)
         newArrival.appendChild(productImg)
         newArrival.appendChild(jacketText)
-        newArrival.appendChild(price)
+        newArrival.appendChild(priceHolder)
     }
 
     } 

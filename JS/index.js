@@ -19,8 +19,8 @@ async function displayNewArrivals() {
         newArrival.href = "productpage.html?id=" + jacket.id; 
 
         const productImg = document.createElement("img");
-        productImg.src = jacket.image;
-        productImg.alt = jacket.description;
+        productImg.src = jacket.images[0].src;
+        productImg.alt = jacket.name;
 
         newContainer.appendChild(newArrival)
         newArrival.appendChild(productImg)
