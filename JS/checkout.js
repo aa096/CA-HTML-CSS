@@ -4,6 +4,16 @@ const products = getExistingCart ();
 const totalContainer = document.querySelector(".total");
 const cartContainer = document.querySelector (".cart_info");
 
+function updateTotalPrice () {
+    let totalPrice = 0;
+
+    products.forEach((product) => {
+        totalPrice += product.price * product.quantity;
+    });
+
+    totalContainer.querySelector(".price_to").textContent = `$ ${totalPrice.toFixed(2)}`;
+}
+
 function removeItem (index) {
     const removeProduct = products[index];
 
@@ -73,11 +83,11 @@ function displayCart() {
 
         const infoP = document.createElement("p");
         infoP.classList.add("blue");
-        infoP.textContent = product.color;
+        infoP.textContent = `${product.color} / ${product.size}`;
 
         const priceP = document.createElement("p");
         priceP.classList.add("price");
-        priceP.textContent = product.price;
+        priceP.textContent = `${product.currency} ${product.price}`;
 
         const buttonRemove = document.createElement("button");
         buttonRemove.classList.add("remove_item");
@@ -88,6 +98,7 @@ function displayCart() {
         cartContainer.appendChild(cartItem);
         
         lineItem.appendChild(wrapperItem);
+        lineItem.appendChild(productTitle);
 
         wrapperItem.appendChild(cartImg);
         wrapperItem.appendChild(bubble);
@@ -96,20 +107,19 @@ function displayCart() {
         infoLine.appendChild(priceP);
 
         cartItem.appendChild(lineItem);
-        cartItem.appendChild(wrapperItem);
-        cartItem.appendChild(productTitle);
         cartItem.appendChild(infoLine);
         cartItem.appendChild(buttonRemove);
         cartItem.appendChild(divider);
+    
+    updateTotalPrice();
 
     });
-
-    totalContainer.querySelector(".price_to").textContent = `$ ${totalPrice.toFixed(2)}`;
 
     cartContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("remove_item")) { 
             const index = event.target.closest(".cart_item").dataset.index;
             removeItem(index);
+            updateTotalPrice();
         }
     });
 }

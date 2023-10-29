@@ -4,6 +4,7 @@ import { sizeMessage } from "./UI/sizeMessage.js";
 import { addStylingIcons } from "./UI/renderStylingIcons.js";
 import { addToCart } from "./utils/cart.js";
 import { renderProductDetails } from "./UI/renderProductDetails.js";
+import { updateCartImage } from "./script.js";
 
 const detailContainer = document.querySelector(".main_section");
 const queryString = document.location.search;
@@ -74,6 +75,7 @@ async function getJacket() {
                 sizeMessage ("✓ The item has been added to the cart")
                 addToCart (result, selectSize);
             });
+            
     } catch (error) {
         showError(error.message, "main_section");
     }
