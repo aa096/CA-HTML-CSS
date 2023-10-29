@@ -10,7 +10,7 @@ const detailContainer = document.querySelector(".main_section");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = `http://aashild-rasmussen.no/wp-json/wc/store/products/${id}`;
+const url = `https://aashild-rasmussen.no/wp-json/wc/store/products/${id}`;
 
 function getTitle (result) {
     const titleContainer = document.getElementById("title");    
