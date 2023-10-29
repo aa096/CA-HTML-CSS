@@ -20,7 +20,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const title = params.get("name")
 
-const url = "http://content-management-system.local/wp-json/wc/store/products"+ id;
+const url = "http://aashild-rasmussen.no/wp-json/wc/store/products"+ id;
 
 export async function getJacket() {
     try { 
