@@ -13,7 +13,6 @@ try {
     }
 }
 
-// removeIfNeeded
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
