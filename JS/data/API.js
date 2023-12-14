@@ -1,5 +1,5 @@
 export async function getJackets() {
-    const url = "https://api.noroff.dev/api/v1/rainy-days";
+    const url = "https://aashild-rasmussen.no/wp-json/wc/store/products/";
     
 try { 
     const response = await fetch(url);
@@ -13,14 +13,13 @@ try {
     }
 }
 
-// removeIfNeeded
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const title = params.get("title")
+const title = params.get("name")
 
-const url = "https://api.noroff.dev/api/v1/rainy-days/"+ id;
+const url = "https://aashild-rasmussen.no/wp-json/wc/store/products/"+ id;
 
 export async function getJacket() {
     try { 
@@ -42,6 +41,6 @@ export async function getJacket() {
 }
 
 export function getTitle (result) {
-    const titleContainer = document.getElementById("title");    
-    titleContainer.textContent = result.title;
+    const titleContainer = document.getElementById("name");    
+    titleContainer.textContent = result.name;
 }

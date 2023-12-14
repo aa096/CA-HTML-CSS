@@ -4,6 +4,16 @@ const products = getExistingCart ();
 const totalContainer = document.querySelector(".total");
 const cartContainer = document.querySelector (".cart_info");
 
+function updateTotalPrice () {
+    let totalPrice = 0;
+
+    products.forEach((product) => {
+        totalPrice += product.price * product.quantity;
+    });
+
+    totalContainer.querySelector(".price_to").textContent = `$ ${totalPrice.toFixed(2)}`;
+}
+
 function removeItem (index) {
     const removeProduct = products[index];
 
@@ -46,32 +56,73 @@ function displayCart() {
         totalPrice += product.price * product.quantity;
         const itemPrice = product.price * product.quantity;
 
-        cartContainer.innerHTML += `<div class="cart_item" data-index="${index}">
-                                        <div class="line">
-                                            <div class="wrapper">
-                                                <img class="cart_img" src="${product.img}" alt="${product.description}"/>
-                                                <span class="quantity_bubble">${product.quantity}</span>
-                                            </div>
-                                            <h1>${product.title}</h1>
-                                        </div>
-                                        <div class="info_line">
-                                            <p class="blue">${product.color} / ${product.size}</p>
-                                            <p class="price">$ ${itemPrice.toFixed(2)}</p>
-                                        </div>
-                                        <button class="remove_item">Remove</button>
-                                        <hr>
-                                    </div>`;
-        });
-    }
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart_item");
+        cartItem.setAttribute("data-index",index);
 
-    totalContainer.querySelector(".price_to").textContent = `$ ${totalPrice.toFixed(2)}`;
+        const lineItem = document.createElement("div");
+        lineItem.classList.add("line");
+
+        const wrapperItem = document.createElement("div");
+        wrapperItem.classList.add("wrapper");
+
+        const cartImg = document.createElement("img");
+        cartImg.src = product.img;
+        cartImg.alt = product.name;
+        cartImg.classList.add("cart_img");
+
+        const bubble = document.createElement("span");
+        bubble.classList.add("quantity_bubble");
+        bubble.textContent = product.quantity;
+
+        const productTitle = document.createElement("h1");
+        productTitle.textContent = product.title;
+
+        const infoLine = document.createElement("div");
+        infoLine.classList.add("info_line");
+
+        const infoP = document.createElement("p");
+        infoP.classList.add("blue");
+        infoP.textContent = `${product.color} / ${product.size}`;
+
+        const priceP = document.createElement("p");
+        priceP.classList.add("price");
+        priceP.textContent = `${product.currency} ${product.price}`;
+
+        const buttonRemove = document.createElement("button");
+        buttonRemove.classList.add("remove_item");
+        buttonRemove.textContent = "Remove";
+
+        const divider = document.createElement("hr");
+
+        cartContainer.appendChild(cartItem);
+        
+        lineItem.appendChild(wrapperItem);
+        lineItem.appendChild(productTitle);
+
+        wrapperItem.appendChild(cartImg);
+        wrapperItem.appendChild(bubble);
+
+        infoLine.appendChild(infoP);
+        infoLine.appendChild(priceP);
+
+        cartItem.appendChild(lineItem);
+        cartItem.appendChild(infoLine);
+        cartItem.appendChild(buttonRemove);
+        cartItem.appendChild(divider);
+    
+    updateTotalPrice();
+
+    });
 
     cartContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("remove_item")) { 
             const index = event.target.closest(".cart_item").dataset.index;
             removeItem(index);
+            updateTotalPrice();
         }
     });
+}
 }
 
 displayCart();

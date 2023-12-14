@@ -4,7 +4,7 @@ const cart = getExistingCart ();
 
 const bagImg = document.getElementById("change");
 
-function updateCartImage () {
+export function updateCartImage () {
     const totalQuantity = cart.reduce ((total, item) => total + item.quantity, 0);
 
     const quantityElement = document.createElement("p");

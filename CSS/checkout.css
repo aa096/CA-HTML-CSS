@@ -189,8 +189,8 @@ input {
 .info_line {
     display: flex;
     justify-content: left;
-    margin-top: -35px;
-    margin-left: 100px;
+    margin-top: -60px;
+    margin-left: 109px;
     gap: 70px;
 }
 

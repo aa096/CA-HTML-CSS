@@ -27,13 +27,12 @@ h2, a {
     font-size: 20px;
     color: black;
     text-decoration: none;
-
 }
 
 p {
     font-family: "Inter", verdana, sans-serif;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: auto;
 }
 
@@ -47,11 +46,6 @@ p {
     align-self: center;
     justify-items: center;
 }
-
-#jacket_container img {
-    grid-column: -1/1;
-    max-width: 300px;
-}
  
 #jacket_container h2,
 #jacket_container p {
@@ -60,10 +54,10 @@ p {
 }
 
 #jacket_container img {
-    max-height: 300px;
+    max-height: 400px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 710px) {
     #jacket_container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -83,7 +77,7 @@ p {
     }
 }
 
-@media (min-width: 926px) {
+@media (min-width: 950px) {
     #jacket_container {
         grid-template-columns: repeat(3,minmax(0,1fr));
         align-items: center;
@@ -96,5 +90,5 @@ p {
 @media (min-width: 1422px) {
     #jacket_container {
         grid-template-columns: repeat(4,minmax(0,1fr));
-    }
+    } 
 }
