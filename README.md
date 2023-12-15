@@ -1,6 +1,6 @@
 # Rainy Days - Cross-course Project 
 
-![image](/Images/rainydays.webp.png)
+![image](/Images/rainydays.webp)
 
 In this project we were tasked to create a fictional online store for a brand called Rainy Days that sells rain jackets. 
 
