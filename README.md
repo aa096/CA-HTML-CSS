@@ -6,7 +6,7 @@ In this project we were tasked to create a fictional online store for a brand ca
 
 ## Description
 
-A e-commerce website made with HTML, CSS, vanilla JavaScript. The product listings on this site are dynamically sourced through an API connected to a headless CMS. The store is for a brand called Rainy Days that sells rainwear made for people with an active lifestyle.
+A e-commerce website made with HTML, CSS, vanilla JavaScript. The product listings on this site are dynamically sourced through an API connected to a headless CMS. The store is for a brand called Rainy Days that sells rainwear made for people in the age of 30-50 with an active lifestyle.
 
 ## Built With
 
