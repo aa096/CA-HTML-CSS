@@ -25,5 +25,6 @@ git clone git@github.com/aa096/CA-HTML-CSS.git
 ```
 
 ## Contact
-
-[My LinkedIn page](www.linkedin.com/in/aashild-lauvland-rasmussen-8494a91ba)
+- Email: aashild.rasmussen@gmail.com
+- Linkedin: [Aashild L. Rasmussen](www.linkedin.com/in/aashild-lauvland-rasmussen-8494a91ba)
+- Portofolio: https://aashild-rasmussen.netlify.app/
